@@ -16,7 +16,6 @@ class ShopPage extends Component {
     const { collections } = this.state;
     return(
       <div>
-        <h1>SHOP PAGE HYPERS</h1>
         {
           collections.map(({id, ...otherCollectionProps}) => (
             <CollectionPreview key={id} {...otherCollectionProps} /> 

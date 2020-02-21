@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+  padding: 20px 0;
+  
+  &-logo {
+    margin-right: auto;
+  }
+
+  .header-menu {
+    &-item {
+      padding: 0 10px;
+    }
+  }
+}
