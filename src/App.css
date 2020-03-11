@@ -12,3 +12,9 @@ a {
     text-decoration: none;
     color: #000000;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 5px 20px;
+    }
+}
