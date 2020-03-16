@@ -13,15 +13,14 @@
     background-position: center;
     margin-bottom: 5px;
 
-    & .add-to-cart { 
+    & button { 
       position: absolute;
-      padding: 20px;
-      background-color: #ffffff;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 50%;
       text-align: center;
+      opacity: 0.8;
       cursor: pointer;
     }
   }
