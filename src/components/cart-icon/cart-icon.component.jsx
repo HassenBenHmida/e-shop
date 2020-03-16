@@ -5,16 +5,21 @@ import { ReactComponent as ShoppingCart } from "../../assets/cart.svg";
 import "./cart-icon.styles.scss";
 import { toggleCartDropdown } from "../../redux/cart/cart.actions";
 
-const CartIcon = ({ toggleCartDropdown, cartitems }) => (
+const CartIcon = ({ toggleCartDropdown, cartItems }) => (
   <div className="cart-icon" onClick={toggleCartDropdown}>
     <ShoppingCart className="shopping-icon" />
-    <span className="item-count">0</span>
+    <span className="item-count">
+      {cartItems.reduce(
+        (accumulator, cartItem) => accumulator + cartItem.quantity,
+        0
+      )}
+    </span>
   </div>
 );
 
-const mapStateToProps = state => ({
-  cartitems: state.cartitems
-})
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  cartItems
+});
 
 const mapDispatchToProps = dispatch => ({
   toggleCartDropdown: () => dispatch(toggleCartDropdown())
