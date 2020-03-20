@@ -15,9 +15,9 @@ import CheckoutItem from "../../components/checkout-item/checkout-item.component
 const CheckoutPage = ({ cartItems, total }) => (
   <div className="checkout-page">
     <CheckoutHeader />
-    <div className="chechout-items">
+    <div className="checkout-items">
       {cartItems.map(cartItem => (
-        <CheckoutItem cartItem={cartItem} />
+        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
     </div>
     <div className="total">TOTAL = ${total}</div>
